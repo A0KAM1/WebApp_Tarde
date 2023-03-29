@@ -1,0 +1,84 @@
+﻿<div class="card">
+    <div class="card-header">
+        <h2>Lista de Clientes</h2>
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-2">
+                <a href="/clientes/cadastro" class="btn btn-success">Novo Cliente</a>
+            </div>
+            <div class="col-3">
+                <select name="filtro" class="form-control">
+                    <option value="0">Todos os campos</option>
+                    <option value="id">Por Id</option>
+                    <option value="nome">Por Nome</option>
+                    <option value="telefone">Por Telefone</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <input type="text" name="busca" class="form-control" />
+            </div>
+            <div class="col-2">
+                <button class="btn btn-primary" type="submit">Pesquisar</button>
+            </div>
+        </div>
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Fulano</td>
+                    <td>(99) 99999-9999</td>
+                    <td>
+                        <a href="/clientes/editar/1" class="btn btn-warning">Editar</a>
+                        <a href="clientes/excluir/1" class="btn btn-danger">Excluir</a>
+                        <a href="clientes/compras/1" class="btn btn-info">Lista de compras</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ciclano</td>
+                    <td>(99) 99999-9999</td>
+                    <td>
+                        <a href="/clientes/editar/2" class="btn btn-warning">Editar</a>
+                        <a href="clientes/excluir/2" class="btn btn-danger">Excluir</a>
+                        <a href="clientes/compras/2" class="btn btn-info">Lista de compras</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Joaozinho</td>
+                    <td>(99) 99999-9999</td>
+                    <td>
+                        <a href="/clientes/editar/3" class="btn btn-warning">Editar</a>
+                        <a href="clientes/excluir/3" class="btn btn-danger">Excluir</a>
+                        <a href="clientes/compras/3" class="btn btn-info">Lista de compras</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Mariazinha</td>
+                    <td>(99) 99999-9999</td>
+                    <td>
+                        <a href="/clientes/editar/4" class="btn btn-warning">Editar</a>
+                        <a href="clientes/excluir/4" class="btn btn-danger">Excluir</a>
+                        <a href="clientes/compras/4" class="btn btn-info">Lista de compras</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
