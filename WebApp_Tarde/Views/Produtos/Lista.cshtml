@@ -1,0 +1,64 @@
+﻿<div class="card">
+    <div class="card-header">
+        <h2>Lista de Produtos</h2>
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-4">
+                <a href="/produtos/cadastro" class="btn btn-success">Novo Cliente</a>
+            </div>
+            <div class="col-3">
+                <select name="filtro" class="form-control">
+                    <option value="0">Todos os Campos</option>
+                    <option value="1">Código</option>
+                    <option value="2">Descrição</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <input type="text" name="busca" class="form-control" placeholder="Pesquisar Produto"/>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Decrição</th>
+                    <th>Qtd.</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Produto 1</td>
+                    <td>10</td>
+                    <td>
+                        <a href="/produtos/editar/1" class="btn btn-warning">Editar</a>
+                        <a href="/produtos/excluir/1" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Produto 2</td>
+                    <td>20</td>
+                    <td>
+                        <a href="/produtos/editar/2" class="btn btn-warning">Editar</a>
+                        <a href="/produtos/excluir/2" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr><tr>
+                    <td>3</td>
+                    <td>Produto 3</td>
+                    <td>30</td>
+                    <td>
+                        <a href="/produtos/editar/3" class="btn btn-warning">Editar</a>
+                        <a href="/produtos/excluir/3" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿<div class="card">
+    <div class="card-header">
+        <h2>Lista de Fornecedores</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <a class="btn btn-success" href="/fornecedores/cadastro">Cadastrar Fornecedor</a>
+            </div>
+            <div class="col-3">
+                <select name="filtro" class="form-control">
+                    <option value="0">Todos os Campos</option>
+                    <option value="1">Nome</option>
+                    <option value="2">Telefone</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <input type="text" name="busca" class="form-control" placeholder="Pesquisar Fornecedor" />
+            </div>
+            <div class="col-2">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fornecedor 1</td>
+                        <td>(99) 99999-9999</td>
+                        <td>
+                            <a href="/fornecedores/editar/1" class="btn btn-warning">Editar</a>
+                            <a href="/fornecedores/excluir/1" class="btn btn-danger">Excluir</a>
+                            <a href="/fornecedores/serviços/1" class="btn btn-primary">Serviços</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Fornecedor 2</td>
+                        <td>(99) 99999-9999</td>
+                        <td>
+                            <a href="/fornecedores/editar/2" class="btn btn-warning">Editar</a>
+                            <a href="/fornecedores/excluir/2" class="btn btn-danger">Excluir</a>
+                            <a href="/fornecedores/serviços/2" class="btn btn-primary">Serviços</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fornecedor 3</td>
+                        <td>(99) 99999-9999</td>
+                        <td>
+                            <a href="/fornecedores/editar/3" class="btn btn-warning">Editar</a>
+                            <a href="/fornecedores/excluir/3" class="btn btn-danger">Excluir</a>
+                            <a href="/fornecedores/serviços/3" class="btn btn-primary">Serviços</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div>
+</div>
