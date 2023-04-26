@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using WebApp_Tarde;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Contexto>(opt => opt.UseSqlServer("Server=c3po;Database=pw_tarde_leticia;Trusted_Connection=True;"));
 
 var app = builder.Build();
 

@@ -6,14 +6,18 @@
                 <h2>Cadastrar Produto</h2>
             </div>
             <div class="card-body" method="post">
-                <form action="/produtos/cadastro">
+                <form action="/produtos/SalvarDados">
                     <div class="form-group">
                         <label>Descrição:</label>
                         <input name="descricao" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label>Quantidade:</label>
-                        <input name="quantidade" type="number" class="form-control" />
+                        <label>Valor:</label>
+                        <input name="valor" type="number" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Ativo? (0=Nao, 1=Sim)</label>
+                        <input name="ativo" type="number" class="form-control"/>
                     </div>
                     <br />
                     <button class="btn btn-success" type="submit">Salvar Produto</button>
