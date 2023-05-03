@@ -1,0 +1,8 @@
+﻿@model List<WebApp_Tarde.Entidades.CategoriaEntidade>
+
+    @foreach (var categoria in Model)
+    {
+        <p>@categoria.Id - @categoria.Nome</p>
+        <a class="btn btn-warning" style="display: inline;" href="/Categoria/Editar">Editar</a>
+        <a class="btn btn-danger">Excluir</a>
+    }
