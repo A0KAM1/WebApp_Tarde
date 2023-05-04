@@ -37,8 +37,16 @@
                         <td>@categoria.Id</td>
                         <td>@categoria.Nome</td>
                         <td>
-                            <a href="/Categoria/editar/@categoria.Id" class="btn btn-warning">Editar</a>
-                            <a href="/Categoria/excluir/@categoria.Id" class="btn btn-danger">Excluir</a>
+                            <a href="/Categoria/Editar/@categoria.Id" class="btn btn-warning">Editar</a>
+                            <a href="/Categoria/Excluir/@categoria.Id" class="btn btn-danger">Excluir</a>
+                            @if (@categoria.Ativo)
+                            {
+                                <input type="checkbox" readonly checked />
+                            }
+                            else
+                            {
+                                <input type="checkbox" readonly />
+                            }
                         </td>
                     </tr>
                 }

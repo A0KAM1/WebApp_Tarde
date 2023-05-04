@@ -20,27 +20,21 @@ namespace WebApp_Tarde.Controllers
         {
             return View();
         }
-        public IActionResult Editar()
-        {
-            return View();
-        }
 
         [HttpPost]
         public IActionResult SalvarDados(CategoriaEntidade dados)
         {
-            contexto.CATEGORIA.Add(dados);
-            contexto.SaveChanges();
-            return RedirectToAction("Lista");
-        }
-        public IActionResult Editar(CategoriaEntidade id, CategoriaEntidade dados)
-        {
-            if (id != null)
+            if(dados.Id != null)
             {
                 contexto.CATEGORIA.Update(dados);
                 contexto.SaveChanges();
             }
-            return RedirectToAction("Lista");
-
+            else
+            {
+                contexto.CATEGORIA.Add(dados);
+                contexto.SaveChanges();
+            }
+                 return RedirectToAction("Lista");           
         }
         public IActionResult Excluir(CategoriaEntidade id, CategoriaEntidade dados)
         {
@@ -50,6 +44,15 @@ namespace WebApp_Tarde.Controllers
                 contexto.SaveChanges();
             }
             return RedirectToAction("Lista");
+        }
+        public IActionResult Editar(CategoriaEntidade id, CategoriaEntidade dados)
+        {
+            if (id != null)
+            {
+                return View(dados);
+            }
+            return RedirectToAction("Lista");
+
         }
     }
 }
