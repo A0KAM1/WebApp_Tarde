@@ -32,21 +32,19 @@ namespace WebApp_Tarde.Controllers
             contexto.SaveChanges();
             return RedirectToAction("Lista");
         }
-        public IActionResult Editar(CategoriaEntidade categoria)
+        public IActionResult Editar(CategoriaEntidade id, CategoriaEntidade dados)
         {
-            if (categoria != null)
+            if (id != null)
             {
-                return View(categoria);
+                contexto.CATEGORIA.Update(dados);
+                contexto.SaveChanges();
             }
-            else
-            {
-                return RedirectToAction("Lista");
-            }
+            return RedirectToAction("Lista");
 
         }
-        public IActionResult Excluir(int id)
+        public IActionResult Excluir(CategoriaEntidade id, CategoriaEntidade dados)
         {
-            if (categoria != null)
+            if (id != null)
             {
                 contexto.CATEGORIA.Remove(dados);
                 contexto.SaveChanges();
