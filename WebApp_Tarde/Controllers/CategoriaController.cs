@@ -45,13 +45,10 @@ namespace WebApp_Tarde.Controllers
             }
             return RedirectToAction("Lista");
         }
-        public IActionResult Editar(CategoriaEntidade id, CategoriaEntidade dados)
+        public IActionResult Editar(CategoriaEntidade dados)
         {
-            if (id != null)
-            {
-                return View(dados);
-            }
-            return RedirectToAction("Lista");
+
+            return View(dados);
 
         }
     }

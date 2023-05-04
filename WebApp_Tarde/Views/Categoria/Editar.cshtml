@@ -8,17 +8,19 @@
         </div>
         <div class="card-body">
             <form action="/Categoria/SalvarDados" method="post">
-                    <div class="form-group">
-                        <label>Nome</label>
-                        <input name="Nome" type="text" class="form-control" value="@Model.Nome" />
-                    </div>
-                    <br />
-                    <select name="Ativo" class="form-control">
-                        <option value="true">Ativo</option>
-                        <option value="false">Inativo</option>
-                    </select>
-                    <br />
-                    <button class="btn btn-success" type="submit">Salvar Categoria</button>
+                <label>Código</label>
+                <input name="ID" type="text" readonly value="@Model.Id" />
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input name="Nome" type="text" class="form-control" value="@Model.Nome" />
+                </div>
+                <br />
+                <select name="Ativo" class="form-control">
+                    <option value="true">Ativo</option>
+                    <option value="false">Inativo</option>
+                </select>
+                <br />
+                <button class="btn btn-success" type="submit">Salvar Categoria</button>
             </form>
         </div>
     </div>
