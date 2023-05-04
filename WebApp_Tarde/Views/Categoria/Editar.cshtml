@@ -7,15 +7,15 @@
             <div><h3>Editar Categoria</h3></div>
         </div>
         <div class="card-body">
-            <form action="/Categoria/SalvarDados" method="post">
-                <label>Código</label>
-                <input name="ID" type="text" readonly value="" />
-                <div class="form-group">
-                    <label>Nome</label>
-                    <input name="Nome" type="text" class="form-control" value="@Model.Nome" />
-                </div>
-                <br />
-                <button class="btn btn-success" type="submit">Salvar Cliente</button>
+            <form action="/Categoria/Editar" method="post">
+                    <label>Código</label>
+                    <input name="ID" type="text" readonly value="@Model.Id" />
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input name="Nome" type="text" class="form-control" value="@Model.Nome" />
+                    </div>
+                    <br />
+                    <button class="btn btn-success" type="submit">Salvar Cliente</button>
             </form>
         </div>
     </div>

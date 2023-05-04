@@ -1,8 +1,21 @@
 ﻿@model WebApp_Tarde.Entidades.CategoriaEntidade
 
-<form action="/Permissao/SalvarDados" method="post">
-    <label>Nome da Categoria:</label>
-    <input type="text" name="Nome" />
-    <br />
-    <button type="submit">Salvar</button>
-</form>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="card col-4">
+        <div class="card-header">
+            <div><h3>Cadastro de Categoria</h3></div>
+        </div>
+        <div class="card-body">
+            <form action="/Permissao/SalvarDados" method="post">
+                <label>Nome da Categoria:</label>
+                <input type="text" name="Nome" />
+                <label>Ativo?</label>
+                <input type="number" name="Ativo" />
+                <br />
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

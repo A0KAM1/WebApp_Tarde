@@ -57,8 +57,6 @@ namespace WebApp_Tarde.Controllers
             {
                 return RedirectToAction("Lista");
             }
-
-
         }
 
     }

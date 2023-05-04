@@ -1,8 +1,50 @@
 ﻿@model List<WebApp_Tarde.Entidades.CategoriaEntidade>
 
-    @foreach (var categoria in Model)
-    {
-        <p>@categoria.Id - @categoria.Nome</p>
-        <a class="btn btn-warning" style="display: inline;" href="/Categoria/Editar">Editar</a>
-        <a class="btn btn-danger">Excluir</a>
-    }
+<div class="card">
+    <div class="card-header">
+        <h2>Lista de Categorias</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                <select name="filtro" class="form-control">
+                    <option value="0">Todos os Campos</option>
+                    <option value="id">Por Id</option>
+                    <option value="nome">Por Nome</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <input type="text" name="busca" class="form-control" placeholder="Pesquisar Categoria" />
+            </div>
+            <div class="col-2">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var categoria in Model)
+                {
+                    <tr>
+                        <td>@categoria.Id</td>
+                        <td>@categoria.Nome</td>
+                        <td>
+                            <a href="/Categoria/editar/@categoria.Id" class="btn btn-warning">Editar</a>
+                            <a href="/Categoria/excluir/@categoria.Id" class="btn btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
