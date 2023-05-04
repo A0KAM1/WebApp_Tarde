@@ -5,9 +5,16 @@ namespace WebApp_Tarde.Controllers
 {
     public class CategoriaController : Controller
     {
+        private Contexto contexto;
+
+        public CategoriaController(Contexto db)
+        {
+            contexto = db;
+        }
+
         public IActionResult Lista()
         {
-            return View();
+            return View(contexto.CATEGORIA.ToList());
         }
         public IActionResult Cadastro()
         {
@@ -16,6 +23,15 @@ namespace WebApp_Tarde.Controllers
         public IActionResult Editar()
         {
             return View();
+        }
+
+        [HttpPost]
+
+        public IActionResult SalvarDados(CategoriaEntidade dados)
+        {
+            contexto.CATEGORIA.Add(dados);
+            contexto.SaveChanges();
+            return RedirectToAction("Lista");
         }
     }
 }
