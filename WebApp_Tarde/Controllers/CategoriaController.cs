@@ -20,10 +20,14 @@ namespace WebApp_Tarde.Controllers
         {
             return View();
         }
-        public IActionResult Editar(CategoriaEntidade dados)
+        public IActionResult Editar(int id, CategoriaEntidade dados)
         {
+            if (dados != null)
+            {
+                return View(dados);
+            }
 
-            return View(dados);
+            return RedirectToAction("Lista");
 
         }
 
