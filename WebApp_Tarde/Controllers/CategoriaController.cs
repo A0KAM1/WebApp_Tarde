@@ -20,6 +20,12 @@ namespace WebApp_Tarde.Controllers
         {
             return View();
         }
+        public IActionResult Editar(CategoriaEntidade dados)
+        {
+
+            return View(dados);
+
+        }
 
         [HttpPost]
         public IActionResult SalvarDados(CategoriaEntidade dados)
@@ -36,6 +42,7 @@ namespace WebApp_Tarde.Controllers
             }
                  return RedirectToAction("Lista");           
         }
+
         public IActionResult Excluir(CategoriaEntidade id, CategoriaEntidade dados)
         {
             if (id != null)
@@ -45,11 +52,7 @@ namespace WebApp_Tarde.Controllers
             }
             return RedirectToAction("Lista");
         }
-        public IActionResult Editar(CategoriaEntidade dados)
-        {
 
-            return View(dados);
 
-        }
     }
 }
