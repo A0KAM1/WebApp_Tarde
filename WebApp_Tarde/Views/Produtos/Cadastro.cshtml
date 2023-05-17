@@ -1,4 +1,6 @@
-﻿<div class="row">
+﻿@model WebApp_Tarde.Models.NovoProdutoViewModel
+
+<div class="row">
     <div class="col-4"></div>
     <div class="col-4">
         <div class="card">
@@ -14,12 +16,19 @@
                     <div class="form-group">
                         <label>Valor:</label>
                         <input name="valor" type="number" class="form-control" />
+                        <label>Categoria</label>
+                        <select name="CategoriaId">
+                            @foreach(var categoria in Model.Lista_Categorias)
+                            {
+                                <option value="@categoria.Id">@categoria.Nome</option>
+                            }
+                        </select>
+                        <label>Ativo</label>
+                        <select name="Ativo" class="form-control">
+                            <option value="true">Ativo</option>
+                            <option value="false">Inativo</option>
+                        </select>
                     </div>
-                    <div>
-                        <label>Ativo? (0=Nao, 1=Sim)</label>
-                        <input name="ativo" type="number" class="form-control"/>
-                    </div>
-                    <br />
                     <button class="btn btn-success" type="submit">Salvar Produto</button>
                 </form>
             </div>
