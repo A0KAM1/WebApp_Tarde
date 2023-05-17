@@ -2,5 +2,7 @@
 {
     public class VendasEntidade
     {
+        public int Id { get; set; }
+        public DateTime Data { get; set; }
     }
 }
